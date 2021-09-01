@@ -1,0 +1,21 @@
+<!-- would put in a header if I had one! -->
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'references/style.css' %}">
+
+<section>
+  <h1>Ellen Wondra's author page!</h1>
+  <h2>Hey, isn't this nifty? Take a look at some authors!</h2>
+  <p class="center">Probably worth noting: this isn't data from the past 6 months! See README for more</p>
+</section>
+
+{% for author in authors %}
+  <section>
+    <h5>{{author.name}}</h5>
+    <p>total articles in database: {{ author.article_set.all.count }} </p>
+    {% for article in author.article_set.all %}
+      <h6>{{article.name}}</h6>
+      <br>
+    {% endfor %}
+  </section>
+{% endfor %}

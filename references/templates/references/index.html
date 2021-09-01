@@ -1,0 +1,18 @@
+<!-- would put in a header if I had one! -->
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'references/style.css' %}">
+
+<section>
+  <h1>Hi there!</h1>
+  <h2>Thank you for reviewing Ellen Wondra's job application :)</h2>
+  <h3>Hopefully, you think she's cool!</h3>
+</section>
+<section>
+  <h5 class="inline">To view the latest articles</h5>
+  <a href="{% url 'latest' %}" aria-label="Latest articles">Click here!</a>
+</section>
+<section>
+  <h5 class="inline">To view all authors</h5>
+  <a href="{% url 'authors' %}" aria-label-"All authors">Click here!</a>
+</section>

@@ -1,0 +1,16 @@
+<!-- would put in a header if I had one! -->
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'references/style.css' %}">
+
+<section>
+  <h1>Ellen Wondra's latest article page!</h1>
+  <h2>Hey, isn't this nifty? Take a look at the latest articles!</h2>
+</section>
+
+{% for article in articles %}
+  <section>
+    <h5>{{article.name}}</h5>
+    <h6>published on {{article.publication_date}}</h6>
+  </section>
+{% endfor %}
